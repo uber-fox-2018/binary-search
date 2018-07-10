@@ -32,7 +32,7 @@ function binary_search(search, array) {
   let left = 0;
   let right = array.length-1;
   while(left <= right) {
-    debugger
+    
     mid = Math.floor((left+right)/2);
     if(array[mid] < search)
       left = mid+1;
@@ -64,6 +64,6 @@ console.log(arrayGanjilSorted, 77, binary_search(77, arrayGanjilSorted))
 console.log(arrayGanjilSorted, 89, binary_search(89, arrayGanjilSorted))
 console.log(arrayGanjilSorted, 55, binary_search(55, arrayGanjilSorted))
 
-// module.exports = {
-//   binary_search
-// }
+module.exports = {
+  binary_search
+}
