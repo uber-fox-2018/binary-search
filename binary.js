@@ -23,34 +23,53 @@ function ownSort(arr) {
 
 
 
-function binary_search (search, array) {
+// function binary_search (search, array) {
+//   // Your searching code
+//   let max = array.length - 1
+//   let min = 0
+//   let mid;
+//   while (min <= max) {
+//     mid = Math.floor((min + max) / 2)
+//     if (array[mid] === search) {
+//       return mid
+//     } else if (array[mid] > search) {
+//       max = mid - 1
+//     } else if (array[mid] < search) {
+//       min = mid + 1
+//     }
+//   }
+//   return -1
+// }
+
+function binary_search(search, array, minIndex=0, maxIndex=array.length - 1) {
   // Your searching code
-  let max = array.length - 1
-  let min = 0
-  let mid;
-  while (min <= max) {
-    mid = Math.floor((min + max) / 2)
-    if (array[mid] === search) {
-      return mid
-    } else if (array[mid] > search) {
-      max = mid - 1
-    } else if (array[mid] < search) {
-      min = mid + 1
+  let midIndex = Math.floor((minIndex + maxIndex) / 2)
+  console.log('max: ',maxIndex);
+  console.log('min: ',minIndex);
+  console.log('mid: ',midIndex);
+  if (maxIndex - minIndex === 1) {
+    return -1
+  } else {
+    if (array[midIndex] === search) {
+      return midIndex
+    } else if (array[midIndex] < search) {
+      return binary_search(search, array, midIndex + 1)
+    } else if (array[midIndex] > search) {
+      return binary_search(search, array, 0, midIndex - 1)
     }
   }
-  return -1
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)
 var arrayGanjilSorted = ownSort(testArrayGanjil)
 
 console.log(ownSort(arrayGenapSorted));
-// console.log(ownSort(testArrayGanjil));
+console.log(ownSort(testArrayGanjil));
 
 
 // Driver code
-// console.log(binary_search(8, arrayGenapSorted))
-// console.log(binary_search(10, arrayGenapSorted))
+console.log(binary_search(8, arrayGenapSorted))
+console.log(binary_search(10, arrayGenapSorted))
 console.log(binary_search(33, arrayGenapSorted))
 
 // console.log(binary_search(53, arrayGanjilSorted))
