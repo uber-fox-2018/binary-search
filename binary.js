@@ -38,20 +38,16 @@ function binary_search (search, array) {
 
 // ===================== REKURSIF ===================
 
-function binary_search (search, array) {
+function binary_search (search, array,firstIndex=0,lastIndex=array.length-1) {
   // Your searching code
-  let firstIndex = 0
-  let lastIndex = array.length-1
   let mid = Math.floor(firstIndex+lastIndex/2)
 
   if (search === array[mid]) {
     return mid
   }else if (search < array[mid]) {
-    lastIndex = mid-1
-    return binary_search(search,array.splice(firstIndex,mid))
+    return binary_search(search,array,0,(mid-1))
   }else if (search > array[mid]) {
-    firstIndex = mid+1
-    return binary_search(search,array.splice(mid,lastIndex))
+    return binary_search(search,array,(mid+1),array.length-1)
   }
   return -1
 }
