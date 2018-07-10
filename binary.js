@@ -16,14 +16,12 @@ function ownSort(arr) {
 return arr 
 }
 
-var a =[ 8, 10, 10, 18, 22, 22, 32, 40, 90 ]
-
 function binary_search (search, array) {
   
   let btsA = 0
   let btsZ = array.length-1
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 1;) {
     debugger
     let mid = (Math.floor(btsA + btsZ)/2)
     if (btsZ - btsA === 1) {
@@ -43,14 +41,10 @@ function binary_search (search, array) {
       }
     }
   }
-  return array[btsZ];
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)
 var arrayGanjilSorted = ownSort(testArrayGanjil)
-
-
-// [ 3, 21, 31, 53, 53, 55, 77, 85, 89 ]
 
 // Driver code
 console.log(binary_search(8, arrayGenapSorted))
@@ -61,6 +55,6 @@ console.log(binary_search(53, arrayGanjilSorted))
 console.log(binary_search(3, arrayGanjilSorted))
 console.log(binary_search(2, arrayGanjilSorted))
 
-// module.exports = {
-//   binary_search
-// }
+module.exports = {
+  binary_search
+}
