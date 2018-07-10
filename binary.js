@@ -22,9 +22,9 @@ function ownSort(arr) {
 
 function binary_search (search, array) {
 	let middle = Math.trunc(array.length/2);
-	while(!(middle > array.length-1)){
+	while(!(middle === array.length)){
 		if(search < array[middle]){
-			if(middle === 0 && array[0] !== search) break;
+			if(middle === 0 && array[middle] !== search) break;
 			middle-=Math.round(middle/2);
 		}
 		else if (array[middle] < search){
@@ -38,7 +38,9 @@ function binary_search (search, array) {
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap);
+console.log(arrayGenapSorted);
 var arrayGanjilSorted = ownSort(testArrayGanjil);
+console.log(arrayGanjilSorted);
 
 // Driver code
 console.log(binary_search(8, arrayGenapSorted));
