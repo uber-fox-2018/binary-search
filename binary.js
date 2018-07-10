@@ -40,10 +40,10 @@ console.log(arrayGanjilSorted);
 
 // Driver code
 
-// console.log('Array Genap');
-// console.log(binary_search(8, arrayGenapSorted))
-// console.log(binary_search(10, arrayGenapSorted))
-// console.log(binary_search(33, arrayGenapSorted))
+console.log('Array Genap');
+console.log(binary_search(8, arrayGenapSorted))
+console.log(binary_search(10, arrayGenapSorted))
+console.log(binary_search(33, arrayGenapSorted))
 console.log('Array Ganjil');
 console.log(binary_search(53, arrayGanjilSorted))
 console.log(binary_search(3, arrayGanjilSorted))
