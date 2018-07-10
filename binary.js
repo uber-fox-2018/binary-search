@@ -15,6 +15,7 @@ function ownSort(arr) {
       }
     }
   }
+  console.log(arr)
   return arr
 }
 /*
@@ -54,17 +55,45 @@ function binary_search(search, array) {
   return mid;
 }
 
+//-------------- ADDED recursive --------------------
+
+function binary_search(search, array, first, last) {
+  // Your searching code
+  // var first = 0;
+  // var last = array.length - 1;
+  var mid = Math.floor((first + last) / 2);
+
+  if (last - first === 1) {
+    return -1
+  }
+    if (search < array[mid]) {
+      last = mid - 1;
+      return binary_search(search, array, first, last)
+    } else if (search > array[mid]) {
+      first = mid + 1;
+      return binary_search(search, array, first, last)
+    } else if (array[mid] === search) {
+      return mid
+    }
+    if (array[mid] !== search) {
+      return -1
+    }
+}
+
 var arrayGenapSorted = ownSort(testArrayGenap)
 var arrayGanjilSorted = ownSort(testArrayGanjil)
 
-// Driver code
-console.log(binary_search(8, arrayGenapSorted))
-console.log(binary_search(10, arrayGenapSorted))
-console.log(binary_search(33, arrayGenapSorted))
+var ganjilArrLength = arrayGanjilSorted.length;
+var genapArrLength = arrayGenapSorted.length;
 
-console.log(binary_search(53, arrayGanjilSorted))
-console.log(binary_search(3, arrayGanjilSorted))
-console.log(binary_search(2, arrayGanjilSorted))
+// Driver code
+console.log(binary_search(8, arrayGenapSorted, 0, genapArrLength));
+console.log(binary_search(10, arrayGenapSorted, 0, genapArrLength));
+console.log(binary_search(33, arrayGenapSorted, 0, genapArrLength));
+
+console.log(binary_search(53, arrayGanjilSorted, 0, ganjilArrLength));
+console.log(binary_search(3, arrayGanjilSorted, 0, ganjilArrLength));
+console.log(binary_search(2, arrayGanjilSorted, 0, ganjilArrLength));
 
 module.exports = {
   binary_search
