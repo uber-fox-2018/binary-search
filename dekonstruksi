@@ -1,0 +1,46 @@
+
+La Déconstruction
+
+n=number(variable)
+i=index
+
+arr = [8,10,10,18,22,22,32,40,90]
+i   = |0||1||2||3||4||5||6||7||8|
+
+let search = n10
+let min = i0
+let max = array.length-1(i8=n90)
+
+while min(i0)<=max(i8){
+
+root = Math.floor((i0+i8)/2)
+            = 0+i8/2
+            = i8/2
+            = i4 
+            = n22 
+
+if (array[i4]===search(n10))
+    return root(i4 = n22)
+}else if (array[i4=n22] < search(n10))
+    min(i0)=root(i4)+1
+        min=root(i5)
+        min=i5
+}else if(array[i4=n22] > search(n10))
+    max(i8)=root(i4)-1
+        max=root(i3)
+        max=i3=n18
+
+    min = (i0=n8)
+    max = (i3=n18)
+
+while(min <= max){
+
+root = min(i0)+max(i3=n18)/2
+root = i0+i3/2
+root = Math.floor(i1.5)=i1
+root = i1
+
+if (array[i1]===search(n10))
+    return root(i1 = n10)
+    return i1=n10
+}
