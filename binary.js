@@ -41,7 +41,7 @@ console.log(arrayGanjilSorted);
 // Driver code
 
 console.log('Array Genap');
-console.log(binary_search(8, arrayGenapSorted))
+console.log(binary_search(90, arrayGenapSorted))
 console.log(binary_search(10, arrayGenapSorted))
 console.log(binary_search(33, arrayGenapSorted))
 console.log('Array Ganjil');
